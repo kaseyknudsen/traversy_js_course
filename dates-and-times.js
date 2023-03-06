@@ -4,7 +4,8 @@ d = new Date();
 console.log(d);
 
 d.toString();
-console.log(d);
+console.log(`to string: ${d}`);
+//to string: Mon Mar 06 2023 09:18:56 GMT-0800 (Pacific Standard Time)
 
 //month is zero based
 let x = new Date(2023, 2, 5);
@@ -34,10 +35,14 @@ console.log(d);
 d = Date.now();
 console.log(d);
 
-//this gets you the num of milliseconds since a particular time
+//this gets you the num of milliseconds since a particular time.
+//getTime and valueOf will give us the same results
 d = new Date("07-10-2022 12:30:00");
 d = d.getTime();
-console.log(d);
+x = d.valueOf()
+console.log(`get time method: ${d}`);
+console.log(`valueOf method: ${x}`);
+//1678123202
 
 d = d.valueOf();
 console.log(d);
